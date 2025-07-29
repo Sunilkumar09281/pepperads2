@@ -8,27 +8,26 @@ const StepsComponent = () => {
 
   const steps = [
     {
-      title: "Education Counseling",
-      description: "One on One counseling with our country specialist. Shortlist your ideal destination, institution and program with their expert guidance.",
+      title: "Know Your Audience",
+      description: "Launch AI-powered surveys in seconds. Ask the right questions to uncover what your visitors want, who they are, and why they came to your site.",
       cta: "Free Expert Consultation"
     },
     {
-      title: "University Applications",
-      description: "Apply to your dream university. Our team will guide you through the application process.",
+      title: "Segment and Target",
+      description: "Group users by behavior and responses. Create segments based on interest, intent, or value — so you can personalize offers and messages with precision.",
       cta: "Apply Now"
     },
     {
-      title: "Loans and Scholarships",
-      description: "Get information about financial aid options to fund your education abroad.",
+      title: "Monetize with Smart Offers",
+      description: "Plug in affiliate or custom offers. PepperAds automatically matches the best-performing offer to each segment using real-time data.",
       cta: "Explore Options"
     },
     {
-      title: "Visa Assistance",
-      description: "Complete guidance for visa application and interview preparation.",
+      title: "Optimize with Analytics",
+      description: "Track clicks, earnings, and survey performance in your dashboard. Learn what works, improve what doesn’t, and grow smarter every day.",
       cta: "Get Help"
     }
   ];
-
   useEffect(() => {
     const handleScroll = () => {
       if (stepsRef.current) {
