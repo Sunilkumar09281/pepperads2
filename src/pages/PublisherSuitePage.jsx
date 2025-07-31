@@ -1,10 +1,13 @@
 import React from 'react';
-import { DollarSign, Rocket, Target, BarChart3, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { DollarSign, Rocket, Target, BarChart3 } from 'lucide-react';
 import FeatureLayout from '../components/FeatureLayout';
 import GlassmorphicCard from '../components/GlassmorphicCard';
 import AnimatedSection from '../components/AnimatedSection';
 
 const PublisherSuitePage = () => {
+  const navigate = useNavigate();
+
   return (
     <FeatureLayout
       title="Publisher Suite"
@@ -55,13 +58,16 @@ const PublisherSuitePage = () => {
               </h3>
               <p className="text-gray-300 mb-6">
                 Publishers in our early program are already seeing results by pairing their audience 
-                with high-performing engagement paths. Join waiting list  to access exclusive features and 
+                with high-performing engagement paths. Join waiting list to access exclusive features and 
                 boost your ROI with real-time tools.
               </p>
-              <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium 
-                transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg flex items-center gap-2">
+              <button
+                onClick={() => navigate('/contact')}
+                className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium 
+                  transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg flex items-center gap-2"
+              >
                 <Rocket className="w-5 h-5" />
-                Join waiting list
+                Join wait list
               </button>
             </div>
           </div>

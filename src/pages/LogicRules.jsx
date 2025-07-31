@@ -1,10 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { GitBranch, ArrowRight, GitFork, BarChart3 } from 'lucide-react';
 import FeatureLayout from '../components/FeatureLayout';
 import GlassmorphicCard from '../components/GlassmorphicCard';
 import AnimatedSection from '../components/AnimatedSection';
 
 const LogicRules = () => {
+  const navigate = useNavigate();
+
   return (
     <FeatureLayout
       title="Logic Rules"
@@ -94,8 +97,11 @@ const LogicRules = () => {
                   recommendation funnels, assessments, and interactive experiences.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium 
-                    transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg flex items-center gap-2">
+                  <button
+                    onClick={() => navigate('/login')}
+                    className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium 
+                      transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg flex items-center gap-2"
+                  >
                     <GitBranch className="w-5 h-5" />
                     Join Waitlist
                   </button>

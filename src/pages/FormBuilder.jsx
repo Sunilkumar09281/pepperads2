@@ -2,9 +2,9 @@ import React from 'react';
 
 const FormBuilder = () => {
   const featureImages = [
-    "https://i.postimg.cc/1347bd05/Add-Toyour-Website.jpg",
-    "https://i.postimg.cc/cHTHzTNZ/notify1.jpg",
-    "https://i.postimg.cc/905B0WnJ/trachresponse.jpg"
+    "https://pepeleads.com/uploads/1753943765-7907511.png",
+    "https://pepeleads.com/uploads/1753943784-2306546.png",
+    "https://pepeleads.com/uploads/1753943935-1391657.png"
   ];
 
   const templateImages = [
@@ -19,7 +19,7 @@ const FormBuilder = () => {
       {/* Hero Section */}
       <div className="relative h-[500px]">
         <img 
-          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIXMlz2Mdu6GcdQdjhuQzbtKDWoZBBJ-9tIg&s"
           alt="Form Builder background" 
           className="w-full h-full object-cover opacity-30"
         />
