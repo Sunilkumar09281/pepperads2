@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import { ArrowRight, BarChart } from 'lucide-react';
 
 const Market_Research = () => {
+  const navigate = useNavigate();
+
   const styles = {
     body: {
       background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%)',
@@ -358,7 +361,7 @@ const Market_Research = () => {
               <p style={styles.surveyTypeDesc}>Compare against competitors</p>
             </div>
             <div style={styles.surveyTypeCard}>
-              <h4 style={styles.surveyTypeTitle}>Buyer Persona</h4>
+              <h4 style={styles.surveyTypeTitle}>Target audience profile</h4>
               <p style={styles.surveyTypeDesc}>Understand your audience</p>
             </div>
           </div>
@@ -471,9 +474,14 @@ const Market_Research = () => {
             </div>
           </div>
           
-          <button style={styles.submitButton}>
-            Submit Survey <ArrowRight size={20} />
-          </button>
+          <button 
+  style={styles.ctaButton}
+  onClick={() => navigate('/login')}
+>
+  Try this Template
+  <ArrowRight size={24} />
+</button>
+
         </div>
         
         {/* Main Content */}
@@ -530,10 +538,14 @@ const Market_Research = () => {
         
         {/* CTA Button */}
         <div style={styles.ctaContainer}>
-          <button style={styles.ctaButton}>
-            Create Marketing Survey
-            <ArrowRight size={24} />
-          </button>
+          <button 
+  style={styles.ctaButton}
+  onClick={() => navigate('/login')}
+>
+  Create Marketing Survey
+  <ArrowRight size={24} />
+</button>
+
         </div>
         
         {/* Stats Grid */}
@@ -543,8 +555,8 @@ const Market_Research = () => {
             <div style={styles.statLabel}>Higher Conversion Rate</div>
           </div>
           <div style={styles.statCard}>
-            <div style={styles.statNumber}>75k+</div>
-            <div style={styles.statLabel}>Marketing Surveys Created</div>
+            <div style={styles.statNumber}>10000+</div>
+            <div style={styles.statLabel}>Marketing Surveys Created Globally</div>
           </div>
           <div style={styles.statCard}>
             <div style={styles.statNumber}>3x</div>

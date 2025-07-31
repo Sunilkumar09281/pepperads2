@@ -76,6 +76,12 @@ const Footer = () => {
             <li><a href="/partnerships" className="hover:text-red-500">Partnerships</a></li>
             <li><a href="/creator-spotlight" className="hover:text-red-500">Creator Spotlight
             </a></li>
+            <li><a href="/nps-calculator" className="hover:underline">NPS Calculator</a></li>
+            <li><a href="/choose-plan" className="hover:underline">Choose a Plan</a></li>
+
+
+
+
           </ul>
         </div>
       </div>

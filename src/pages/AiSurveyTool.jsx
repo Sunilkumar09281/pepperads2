@@ -1,10 +1,13 @@
 import React from 'react';
 import { Sparkles, Zap, PenTool, BrainCircuit } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import FeatureLayout from '../components/FeatureLayout';
 import GlassmorphicCard from '../components/GlassmorphicCard';
 import AnimatedSection from '../components/AnimatedSection';
 
 const AiSurveyTool = () => {
+  const navigate = useNavigate();
+
   return (
     <FeatureLayout
       title="AI Survey Tool"
@@ -82,7 +85,9 @@ const AiSurveyTool = () => {
               <div className="md:w-1/2">
                 <div className="bg-gray-900/80 p-6 rounded-xl mb-8 border border-gray-800">
                   <p className="text-gray-400 font-mono text-sm mb-4">AI Prompt:</p>
-                  <p className="text-white font-medium">Create a customer satisfaction survey for an ecommerce store selling electronics</p>
+                  <p className="text-white font-medium">
+                    Create a customer satisfaction survey for an ecommerce store selling electronics
+                  </p>
                   <div className="mt-4 flex">
                     <button className="ml-auto bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium 
                       transition-all duration-300">
@@ -96,9 +101,10 @@ const AiSurveyTool = () => {
                   gen angles or building survey journeys that connect with monetized offers 
                   in the backend.
                 </p>
-                <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium 
-                  transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg flex items-center gap-2">
-                  <Sparkles className="w-5 h-5" />
+                <button
+                  onClick={() => navigate('/login')}
+                  className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-md hover:bg-yellow-300 transition"
+                >
                   Try AI Survey Creation
                 </button>
               </div>
@@ -106,7 +112,9 @@ const AiSurveyTool = () => {
                 <div className="bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-md p-6 rounded-xl border border-gray-800">
                   <div className="flex items-center justify-between mb-6">
                     <h4 className="text-xl font-bold text-white">Customer Satisfaction Survey</h4>
-                    <span className="text-xs font-medium px-3 py-1 bg-green-500/20 text-green-400 rounded-full">AI Generated</span>
+                    <span className="text-xs font-medium px-3 py-1 bg-green-500/20 text-green-400 rounded-full">
+                      AI Generated
+                    </span>
                   </div>
                   
                   <div className="space-y-6">

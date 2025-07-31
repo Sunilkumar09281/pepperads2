@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import { ArrowRight, Search, Filter, Tag, Download, Star } from 'lucide-react';
 
 const AllTemplates = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const styles = {
@@ -441,9 +443,10 @@ const AllTemplates = () => {
                   )}
                 </div>
                 <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px'}}>
-                  <button style={styles.useButton}>
-                    Use Template <ArrowRight size={16} />
-                  </button>
+                 <button style={styles.useButton} onClick={() => navigate('/login')}>
+  Use Template <ArrowRight size={16} />
+</button>
+
                 </div>
               </div>
             </div>
@@ -508,17 +511,19 @@ const AllTemplates = () => {
           }}>
             We've made it easy to connect form templates with performance tracking tools available in the publisher suite — letting you go from setup to earnings quickly. Perfect for creators and businesses looking to optimize form conversions.
           </p>
-          <button style={styles.ctaButton}>
-            Explore Publisher Suite <ArrowRight size={20} />
-          </button>
+          <button style={styles.ctaButton} onClick={() => navigate('/login')}>
+  Explore Publisher Suite <ArrowRight size={20} />
+</button>
+
         </div>
         
         {/* CTA Section */}
         <div style={styles.ctaContainer}>
-          <button style={styles.ctaButton}>
-            Explore All Templates
-            <ArrowRight size={24} />
-          </button>
+          <button style={styles.ctaButton} onClick={() => navigate('/contact')}>
+  Explore All Templates
+  <ArrowRight size={24} />
+</button>
+
         </div>
       </div>
     </div>

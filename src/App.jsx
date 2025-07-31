@@ -61,6 +61,9 @@ import EditMicroGuides from './editPages/EditMicroGuides';
 import Landing1 from './pages/Landing1';
 import Landing2 from './pages/Landing2';
 import Pricing from './pages/Pricing';
+import NPSCalculator from './pages/NPSCalculator';
+import ChooseAPlan from './pages/ChooseAPlan';
+
 const HomePage = () => <Hero />;
 const FeaturesPage = () => <Features />;
 const ExamplesPage = () => <FeaturesExamples />;
@@ -134,6 +137,10 @@ const App = () => {
             <Route path="/edit-ai-promo" element={<EditAipromo />} />
             <Route path="/edit-micro-guides" element={<EditMicroGuides />} />
             <Route path="/pricing" element={<Pricing />} />
+            <Route path="/Contact" element={<ContactUs />} />
+            <Route path="/nps-calculator" element={<NPSCalculator />} />
+            <Route path="/choose-plan" element={<ChooseAPlan />} />
+            
            
        
            {/* Public Routes */}

@@ -100,7 +100,7 @@ const FormBuilder = () => {
                     {index === 3 && "Donation Forms"}
                   </h3>
                   <p className="text-gray-300 flex-grow">
-                    {index === 0 && "Easily collect RSVPs, payments, and other attendee information."}
+                    {index === 0 && "Easily collect data, payments, and other attendee information."}
                     {index === 1 && "Seamlessly manage applications for jobs, grants, programs, and more."}
                     {index === 2 && "Collect contact information from customers, prospects, and more."}
                     {index === 3 && "Collect donations and payments, right from your website."}

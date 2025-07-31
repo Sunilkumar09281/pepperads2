@@ -51,7 +51,7 @@ const Blog = () => {
             {
               title: "2024 Form Design Trends",
               desc: "Discover the hottest UI/UX practices in forms — from microinteractions to smart layouts.",
-              img: "https://images.unsplash.com/photo-1600195077070-6c1f0ebf5f69?auto=format&fit=crop&q=80"
+              img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv0_d_-Ja4lVcNaO_MSxwcTN1hRTnIMKuEOQ&s"
             },
             {
               title: "High-Converting Funnels",

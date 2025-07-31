@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const MonetizationTemplates = () => {
+  const navigate = useNavigate();
+
   const styles = {
     body: {
       background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%)',
@@ -349,7 +352,7 @@ const MonetizationTemplates = () => {
             marginBottom: '40px'
           }}>
             <div style={styles.imageContainer}>
-              <img src="/api/placeholder/800/400" alt="Partner Tools Section" style={styles.featureImage} />
+              <img src="https://img.freepik.com/free-vector/paper-style-core-values-background_23-2149079276.jpg?semt=ais_hybrid&w=740" alt="Partner Tools Section" style={styles.featureImage} />
             </div>
             <div>
               <h3 style={{...styles.sectionTitle, textAlign: 'center'}}>
@@ -369,16 +372,20 @@ const MonetizationTemplates = () => {
         
         {/* CTA Button */}
         <div style={styles.ctaContainer}>
-          <button style={styles.ctaButton}>
-            Explore Partner Tools Section
-            <ArrowRight size={24} />
-          </button>
-        </div>
+  <button
+    onClick={() => navigate('/login')}
+    style={styles.ctaButton}
+  >
+    Explore Partner Tools Section
+    <ArrowRight size={24} />
+  </button>
+</div>
+
         
         {/* Stats Grid */}
         <div style={styles.statsGrid}>
           <div style={styles.statCard}>
-            <div style={styles.statNumber}>300%</div>
+            <div style={styles.statNumber}>2.5x</div>
             <div style={styles.statLabel}>Average ROI Increase</div>
           </div>
           <div style={styles.statCard}>
@@ -386,8 +393,8 @@ const MonetizationTemplates = () => {
             <div style={styles.statLabel}>Completion Rate</div>
           </div>
           <div style={styles.statCard}>
-            <div style={styles.statNumber}>10k+</div>
-            <div style={styles.statLabel}>Active Campaigns</div>
+            <div style={styles.statNumber}>10,000+</div>
+            <div style={styles.statLabel}>Active Campaigns Globally</div>
           </div>
         </div>
       </div>

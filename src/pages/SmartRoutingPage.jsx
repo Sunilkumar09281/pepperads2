@@ -1,10 +1,13 @@
 import React from 'react';
 import { GitBranch, Target, Zap, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import FeatureLayout from '../components/FeatureLayout';
 import GlassmorphicCard from '../components/GlassmorphicCard';
 import AnimatedSection from '../components/AnimatedSection';
 
 const SmartRoutingPage = () => {
+  const navigate = useNavigate();
+
   return (
     <FeatureLayout
       title="Smart Response Routing"
@@ -76,9 +79,10 @@ const SmartRoutingPage = () => {
                   based on their responses. Perfect for lead qualification, product recommendations, 
                   and customer support flows.
                 </p>
-                <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium 
-                  transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg flex items-center gap-2">
-                  <GitBranch className="w-5 h-5" />
+                <button
+                  onClick={() => navigate('/login')}
+                  className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-md hover:bg-yellow-300 transition"
+                >
                   Start Routing
                 </button>
               </div>

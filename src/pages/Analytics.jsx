@@ -18,7 +18,7 @@ const AnalyticsPage = () => {
             Data without insights is just noise. Our upcoming analytics dashboard will help you 
             track views, drop-off rates, completion percentages, and more — all in one place. 
             You'll get visual reports, exportable summaries, and real-time trends so you can 
-            improve form performance quickly.
+            gain insights and performance quickly.
           </p>
         </div>
 

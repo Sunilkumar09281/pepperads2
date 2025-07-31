@@ -44,7 +44,7 @@ const PublisherSuitePage = () => {
           <div className="flex flex-col md:flex-row items-center gap-10">
             <div className="md:w-1/2">
               <img 
-                src="https://images.pexels.com/photos/7567455/pexels-photo-7567455.jpeg"
+                src="https://media.istockphoto.com/id/1488294044/photo/businessman-works-on-laptop-showing-business-analytics-dashboard-with-charts-metrics-and-kpi.jpg?s=612x612&w=0&k=20&c=AcxzQAe1LY4lGp0C6EQ6reI7ZkFC2ftS09yw_3BVkpk="
                 alt="Analytics Dashboard" 
                 className="rounded-xl shadow-2xl"
               />
@@ -55,13 +55,13 @@ const PublisherSuitePage = () => {
               </h3>
               <p className="text-gray-300 mb-6">
                 Publishers in our early program are already seeing results by pairing their audience 
-                with high-performing engagement paths. Apply now to access exclusive features and 
+                with high-performing engagement paths. Join waiting list  to access exclusive features and 
                 boost your ROI with real-time tools.
               </p>
               <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium 
                 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg flex items-center gap-2">
                 <Rocket className="w-5 h-5" />
-                Apply Now
+                Join waiting list
               </button>
             </div>
           </div>

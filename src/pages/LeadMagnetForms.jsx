@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const LeadMagnetForms = () => {
+  const navigate = useNavigate();
+
   const styles = {
     body: {
       background: 'linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%)',
@@ -384,10 +387,14 @@ const LeadMagnetForms = () => {
         
         {/* CTA Button */}
         <div style={styles.ctaContainer}>
-          <button style={styles.ctaButton}>
-            Browse Form Templates
-            <ArrowRight size={24} />
-          </button>
+          <button 
+  style={styles.ctaButton}
+  onClick={() => navigate('/login')}
+>
+  Browse Form Templates
+  <ArrowRight size={24} />
+</button>
+
         </div>
         
         {/* Stats Grid */}

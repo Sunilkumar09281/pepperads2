@@ -3,8 +3,11 @@ import { FileUp, CheckCircle, Download, Edit3 } from 'lucide-react';
 import FeatureLayout from '../components/FeatureLayout';
 import GlassmorphicCard from '../components/GlassmorphicCard';
 import AnimatedSection from '../components/AnimatedSection';
+import { useNavigate } from 'react-router-dom';
 
 const UploadPdfPage = () => {
+  const navigate = useNavigate();
+
   return (
     <FeatureLayout
       title="Upload PDFs"
@@ -83,8 +86,10 @@ const UploadPdfPage = () => {
                   assets into revenue-generating formats. Convert one-time PDF forms 
                   into recurring engagement tools.
                 </p>
-                <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium 
-                  transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg">
+                <button
+                  onClick={() => navigate('/login')}
+                  className="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-md hover:bg-yellow-300 transition"
+                >
                   Start Converting PDFs
                 </button>
               </div>

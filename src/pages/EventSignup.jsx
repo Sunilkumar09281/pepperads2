@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
 import { ArrowRight, Calendar, MapPin, Clock, Users, Check } from 'lucide-react';
 
 const EventSignup = () => {
+  const navigate = useNavigate();
+
   const [eventType, setEventType] = useState('conference');
 
   const styles = {
@@ -416,7 +419,7 @@ const EventSignup = () => {
             
             <div style={styles.eventProperty}>
               <Calendar size={18} />
-              <span>April 28-30, 2025</span>
+              <span>September 28-30, 2025</span>
             </div>
             
             <div style={styles.eventProperty}>
@@ -588,9 +591,14 @@ const EventSignup = () => {
             <label htmlFor="terms">I agree to the terms and conditions</label>
           </div>
           
-          <button style={styles.submitButton}>
-            Register Now <ArrowRight size={20} />
-          </button>
+          <button 
+  style={styles.ctaButton}
+  onClick={() => navigate('/login')}
+>
+  Try this Template
+  <ArrowRight size={24} />
+</button>
+
         </div>
         
         {/* Main Content */}
@@ -647,17 +655,21 @@ const EventSignup = () => {
         
         {/* CTA Button */}
         <div style={styles.ctaContainer}>
-          <button style={styles.ctaButton}>
-            Create Event Signup Form
-            <ArrowRight size={24} />
-          </button>
+          <button 
+  style={styles.ctaButton}
+  onClick={() => navigate('/login')}
+>
+  Create Event Signup Form
+  <ArrowRight size={24} />
+</button>
+
         </div>
         
         {/* Stats Grid */}
         <div style={styles.statsGrid}>
           <div style={styles.statCard}>
-            <div style={styles.statNumber}>10k+</div>
-            <div style={styles.statLabel}>Events Managed</div>
+            <div style={styles.statNumber}>10000+</div>
+            <div style={styles.statLabel}>Events Managed Globally</div>
           </div>
           <div style={styles.statCard}>
             <div style={styles.statNumber}>98%</div>
@@ -665,7 +677,7 @@ const EventSignup = () => {
           </div>
           <div style={styles.statCard}>
             <div style={styles.statNumber}>2.5M+</div>
-            <div style={styles.statLabel}>Registrations Processed</div>
+            <div style={styles.statLabel}>Registrations Processed Globally</div>
           </div>
         </div>
       </div>
