@@ -1,7 +1,10 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const OurVision = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -30,9 +33,9 @@ const OurVision = () => {
         {/* Speed & Simplicity + Image */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-16">
           <div className="md:w-1/2">
-            <h3 className="text-4xl font-bold text-white mb-4">Speed & Simplicity</h3>
+            <h3 className="text-4xl font-bold text-white mb-4">Speed Meets Simplicity</h3>
             <p className="text-gray-400 text-lg">
-              From drag-and-drop builders to AI-powered tools, everything we do is centered on speed and simplicity.
+              From drag-and-drop builders to AI-powered form tools, our platform is designed for fast, intuitive experiences—so anyone can go from idea to live form in minutes.
             </p>
           </div>
           <div className="md:w-1/2 flex justify-center">
@@ -56,7 +59,7 @@ const OurVision = () => {
             />
           </div>
           <div className="md:w-1/2">
-            <h3 className="text-4xl font-bold text-white mb-4">Result Driven</h3>
+            <h3 className="text-4xl font-bold text-white mb-4">Built for Results</h3>
             <p className="text-gray-400 text-lg">
               We're not just a survey platform—we're a launchpad for insight, engagement, and income generation.
             </p>
@@ -70,7 +73,9 @@ const OurVision = () => {
 
         {/* CTA Button */}
         <div className="mt-12 flex justify-center">
-          <button className="group flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors">
+          <button
+            onClick={() => navigate('/ContactUs')}
+            className="group flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors">
             Start Building Today
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
@@ -84,11 +89,11 @@ const OurVision = () => {
           </div>
           <div className="bg-gray-900 p-6 rounded-xl text-center">
             <div className="text-3xl font-bold text-red-600 mb-2">50k+</div>
-            <div className="text-gray-400">Active Users</div>
+            <div className="text-gray-400">Active Users globally</div>
           </div>
           <div className="bg-gray-900 p-6 rounded-xl text-center">
             <div className="text-3xl font-bold text-red-600 mb-2">1M+</div>
-            <div className="text-gray-400">Forms Created</div>
+            <div className="text-gray-400">Forms Created globally</div>
           </div>
         </div>
 
