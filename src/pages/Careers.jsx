@@ -1,7 +1,9 @@
 import React from 'react';
 import { Briefcase, Code, Brain, Palette, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Careers = () => {
+
   const positions = [
     {
       title: 'Frontend Developer',
@@ -11,14 +13,16 @@ const Careers = () => {
     {
       title: 'AI Engineer',
       icon: <Brain className="w-6 h-6 text-red-500" />,
-      description: 'Design and implement AI-powered form generation and analysis systems.',
+      description: 'Architect AI-powered systems for dynamic form creation and response analysis.',
     },
     {
       title: 'UX Designer',
       icon: <Palette className="w-6 h-6 text-red-500" />,
-      description: 'Create intuitive user experiences for our form building platform.',
+      description: 'Design intuitive, delightful user journeys for our form-building platform.',
     },
   ];
+  const navigate = useNavigate();
+
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -55,7 +59,7 @@ const Careers = () => {
             </div>
             
             <p className="text-xl leading-relaxed text-gray-300 text-center mb-12">
-              Whether you're into frontend development, automation, AI prompt design, or marketing strategy, 
+              Whether you're into frontend development, automation, AI prompt design, data analytics or marketing strategy, 
               we want people who think fast, love structure, and enjoy working with creators and marketers.
             </p>
 
@@ -71,7 +75,10 @@ const Careers = () => {
                     <h3 className="text-xl font-bold text-red-500">{position.title}</h3>
                   </div>
                   <p className="text-gray-300">{position.description}</p>
-                  <button className="mt-4 flex items-center gap-2 text-red-500 hover:text-red-400 transition-colors">
+                  <button 
+                    onClick={() => navigate('/login')}
+
+                    className="mt-4 flex items-center gap-2 text-red-500 hover:text-red-400 transition-colors">
                     Apply Now
                     <ChevronRight className="w-4 h-4" />
                   </button>
@@ -108,8 +115,10 @@ const Careers = () => {
 
             {/* CTA Button */}
             <div className="mt-12 flex justify-center">
-              <button className="group bg-red-600/90 backdrop-blur-sm hover:bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center gap-2">
-                View All Positions
+              <button 
+                onClick={() => navigate('/login')}
+                className="group bg-red-600/90 backdrop-blur-sm hover:bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all flex items-center gap-2">
+                View Current Openings
                 <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
