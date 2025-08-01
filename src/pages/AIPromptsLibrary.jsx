@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { BarChart3,ArrowRight, Zap, Database, Search, BookOpen, Copy, Star, Filter, ChevronDown, Tag, ThumbsUp } from 'lucide-react';
 import { Users } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const AIPromptsLibrary = () => {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -328,7 +329,7 @@ const AIPromptsLibrary = () => {
     {
       id: 1,
       title: "Product Satisfaction Survey",
-      text: "What aspects of [product] do you find most valuable? How often do you use these features? What improvements would make you more likely to recommend our product?",
+      text: "What features of [product] do you use most? What improvements would make it more valuable to you?",
       category: "Feedback",
       industry: "E-commerce",
       tags: ["Customer Experience", "Product"],
@@ -337,7 +338,7 @@ const AIPromptsLibrary = () => {
     {
       id: 2,
       title: "Lead Qualification Questionnaire",
-      text: "What challenges are you currently facing with [industry problem]? How are these issues impacting your business? What solutions have you tried in the past?",
+      text: "What pain points are you currently facing? What solutions have you tried before?",
       category: "Lead Generation",
       industry: "SaaS",
       tags: ["Sales", "B2B"],
@@ -346,7 +347,7 @@ const AIPromptsLibrary = () => {
     {
       id: 3,
       title: "Feature Prioritization Survey",
-      text: "Which of the following features would bring the most value to your workflow? How would you rank these potential improvements in order of importance?",
+      text: "Which of these potential features would be most valuable to your workflow?",
       category: "Product Research",
       industry: "SaaS",
       tags: ["Product Development", "UX"],
@@ -355,7 +356,7 @@ const AIPromptsLibrary = () => {
     {
       id: 4,
       title: "Customer Support Experience",
-      text: "How would you rate your recent support interaction? Did our team resolve your issue completely? What one thing could we improve about our support process?",
+      text:"Was your recent issue resolved? How could we improve our support process?",
       category: "Customer Support",
       industry: "All Industries",
       tags: ["Support", "CX"],
@@ -364,7 +365,7 @@ const AIPromptsLibrary = () => {
     {
       id: 5,
       title: "Market Trends Assessment",
-      text: "How have your purchasing habits for [product category] changed in the past year? What factors most influence your buying decisions in this category?",
+      text: "What changes have you seen in your buying habits over the past year?",
       category: "Market Research",
       industry: "Retail",
       tags: ["Trends", "Consumer Behavior"],
@@ -373,13 +374,15 @@ const AIPromptsLibrary = () => {
     {
       id: 6,
       title: "Employee Satisfaction Survey",
-      text: "How would you rate your work-life balance at our company? What aspects of our company culture do you value most? What one change would most improve your job satisfaction?",
+      text: "How would you rate your work-life balance? What one thing could improve your daily experience?",
       category: "Employee Surveys",
       industry: "All Industries",
       tags: ["HR", "Company Culture"],
       stats: { uses: 10.4, rating: 4.8 }
     }
   ];
+  const navigate = useNavigate();
+
 
   return (
     <div style={styles.body}>
@@ -414,21 +417,21 @@ const AIPromptsLibrary = () => {
           </div>
           
           <div>
-            <h2 style={styles.featuredTitle}>Net Promoter Score (NPS) with Context</h2>
+            <h2 style={styles.featuredTitle}>Enhanced NPS + Sentiment Analysis</h2>
             <p style={styles.featuredDescription}>
-              Our highest-rated prompt that generates actionable insights beyond the standard NPS question. Perfect for understanding not just your score, but why customers feel the way they do.
+             Go beyond just a Net Promoter Score. This advanced prompt set uncovers the "why" behind the score to give you deeper insights into customer sentiment.
             </p>
             
             <div style={styles.featuredContent}>
-              On a scale from 0-10, how likely are you to recommend [product/service] to a friend or colleague? <br/><br/>
+              On a scale from 0–10, how likely are you to recommend [product/service] to a friend or colleague?<br/><br/>
               
-              What is the primary reason for your score? <br/><br/>
+              What’s the main reason for your score? <br/><br/>
               
-              What is one thing we could improve that would increase your likelihood to recommend us? <br/><br/>
+              What’s one thing we could improve to earn a higher rating? <br/><br/>
               
-              Which alternative solutions did you consider before choosing our [product/service]? <br/><br/>
+              Which other solutions did you consider before choosing us? <br/><br/>
               
-              What features or aspects of our [product/service] do you value most?
+             What features of [product/service] are most valuable to you?
             </div>
             
             <div style={styles.featuredFooter}>
@@ -537,7 +540,7 @@ const AIPromptsLibrary = () => {
         </div>
         
         {/* Pagination */}
-        <div style={styles.paginationContainer}>
+        {/* <div style={styles.paginationContainer}>
           <button style={styles.pageButton}>«</button>
           <button style={{...styles.pageButton, ...styles.activePage}}>1</button>
           <button style={styles.pageButton}>2</button>
@@ -545,15 +548,17 @@ const AIPromptsLibrary = () => {
           <button style={styles.pageButton}>4</button>
           <button style={styles.pageButton}>5</button>
           <button style={styles.pageButton}>»</button>
-        </div>
+        </div> */}
         
         {/* CTA Section */}
         <div style={styles.ctaSection}>
           <h2 style={styles.ctaTitle}>Create Your <span style={styles.accent}>Custom Prompts</span></h2>
           <p style={styles.ctaText}>
-            Need something more tailored to your specific needs? Our AI Survey Tool allows you to craft custom prompts that perfectly match your research goals.
+            Build your own prompts with our AI Survey Tool, designed to adapt to your industry, goals, and audience dynamics.
           </p>
-          <button style={styles.ctaButton}>
+          <button 
+            onClick={() => navigate('/ContactUs')}
+            style={styles.ctaButton}>
             Create Custom Prompt <ArrowRight size={20} />
           </button>
         </div>
