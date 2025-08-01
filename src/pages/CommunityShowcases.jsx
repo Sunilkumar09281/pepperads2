@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Star, Users, TrendingUp, Award, Bookmark } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const CommunityShowcases = () => {
   const styles = {
@@ -267,53 +268,55 @@ const CommunityShowcases = () => {
   const showcases = [
     {
       id: 1,
-      title: "MindfulMedia's Audience Growth",
+      title: "MindfulMedia's Audience Surge",
       category: "Creator",
-      image: "/api/placeholder/400/200",
-      description: "How a wellness content creator used PepperAds to grow their audience by 350% in just 6 months while increasing monthly revenue.",
+      image: "https://i.pinimg.com/736x/9c/cd/8c/9ccd8c875859f50f00155488f36fe2a5.jpg",
+      description: "Creator | Grew wellness followers by 350% in 6 months and boosted monthly income.",
       stats: { views: "8.2K", likes: "729", comments: "83" }
     },
     {
       id: 2,
-      title: "TechBurst Agency ROI",
+      title: "TechBurst's Scalable ROI",
       category: "Agency",
-      image: "/api/placeholder/400/200",
-      description: "This digital agency multiplied client ROI by integrating PepperAds into their complete marketing strategy for SaaS clients.",
+      image: "https://i.pinimg.com/1200x/a3/6e/6c/a36e6cd7366c25bba9ec3fa02ca2010f.jpg",
+      description: "Agency | Drove higher client ROI with integrated PepperAds for SaaS campaigns.",
       stats: { views: "6.7K", likes: "493", comments: "61" }
     },
     {
       id: 3,
       title: "FitFusion's Engagement Strategy",
       category: "Brand",
-      image: "/api/placeholder/400/200",
-      description: "How FitFusion doubled their retention rates and increased user engagement through targeted PepperAds campaigns.",
+      image: "https://i.pinimg.com/736x/8c/6c/ef/8c6cef6adb3d48d4671a571c9a57d0c4.jpg",
+      description: "Brand | Doubled user retention with engaging ad workflows.",
       stats: { views: "7.4K", likes: "512", comments: "47" }
     },
     {
       id: 4,
       title: "StreamScape's Monetization",
       category: "Creator",
-      image: "/api/placeholder/400/200",
-      description: "A gaming streamer reveals their PepperAds setup that generated an additional $12,000 in quarterly revenue.",
+      image: "https://i.pinimg.com/736x/e4/11/fb/e411fb01a934ff69eb70cef582ede8a5.jpg",
+      description: "Creator | A streamer’s setup that unlocked $12K in new revenue.",
       stats: { views: "12.3K", likes: "938", comments: "104" }
     },
     {
       id: 5,
       title: "EcoTrek's Community Building",
       category: "Brand",
-      image: "/api/placeholder/400/200",
-      description: "How an outdoor gear company built a thriving community and advocacy program with PepperAds integration.",
+      image: "https://i.pinimg.com/736x/01/8a/b1/018ab19a8241f340992470f7f20a3e05.jpg",
+      description: "Brand | Built an engaged brand community and loyalty flow with PepperAds.",
       stats: { views: "5.6K", likes: "381", comments: "32" }
     },
     {
       id: 6,
       title: "MediaHub's Client Success",
       category: "Agency",
-      image: "/api/placeholder/400/200",
-      description: "This boutique agency used PepperAds to deliver exceptional results for clients in competitive niches.",
+      image: "https://i.pinimg.com/736x/ca/24/d8/ca24d817ab32795ac12626eca239d797.jpg",
+      description: "Agency | Delivered standout results in competitive verticals using campaign insights.",
       stats: { views: "4.9K", likes: "276", comments: "41" }
     }
   ];
+  const navigate = useNavigate();
+
 
   return (
     <div style={styles.body}>
@@ -337,7 +340,7 @@ const CommunityShowcases = () => {
         <div style={styles.featuredShowcase}>
           <div style={styles.featuredHeader}>
             <span style={styles.featuredLabel}>
-              <Award size={24} /> FEATURED SUCCESS STORY
+              <Award size={24} /> sample success story
             </span>
           </div>
           
@@ -345,44 +348,46 @@ const CommunityShowcases = () => {
             <div style={styles.featuredContent}>
               <h2 style={styles.featuredTitle}>How StyleCode Scaled to 500K Subscribers</h2>
               <p style={styles.featuredText}>
-                Fashion tech creator Mia Chen reveals her exact strategy using PepperAds to grow her audience from 50K to over 500K subscribers while 4x'ing her monthly revenue through strategic monetization.
+                Fashion-tech creator Mia Chen scaled from 50K to 500K subscribers and 4x'd her monthly income—powered by smart PepperAds integration and a laser-focused strategy.
               </p>
               
               <div style={styles.featuredResults}>
                 <div style={styles.resultItem}>
-                  <div style={styles.resultNumber}>450K+</div>
+                  <div style={styles.resultNumber}>50K+</div>
                   <div style={styles.resultLabel}>New Subscribers</div>
                 </div>
                 <div style={styles.resultItem}>
-                  <div style={styles.resultNumber}>4x</div>
+                  <div style={styles.resultNumber}>3.6x</div>
                   <div style={styles.resultLabel}>Revenue Growth</div>
                 </div>
                 <div style={styles.resultItem}>
-                  <div style={styles.resultNumber}>87%</div>
+                  <div style={styles.resultNumber}>72%</div>
                   <div style={styles.resultLabel}>Engagement Rate</div>
                 </div>
               </div>
               
-              <button style={styles.featuredCta}>
+              <button 
+                onClick={() => navigate('/contactus')}
+                style={styles.featuredCta}>
                 Read Full Case Study <ArrowRight size={20} />
               </button>
             </div>
             
             <div>
-              <img src="/api/placeholder/500/400" alt="Featured Showcase" style={styles.featuredImage} />
+              <img src="https://i.pinimg.com/736x/ed/82/e8/ed82e8dc472ee7df9ef16832547a083b.jpg" alt="Featured Showcase" style={styles.featuredImage} />
             </div>
           </div>
         </div>
         
         {/* Filter Buttons */}
-        <div style={styles.filterContainer}>
+        {/* <div style={styles.filterContainer}>
           <button style={{...styles.filterButton, ...styles.filterActive}}>All</button>
           <button style={styles.filterButton}>Creators</button>
           <button style={styles.filterButton}>Agencies</button>
           <button style={styles.filterButton}>Brands</button>
           <button style={styles.filterButton}>E-commerce</button>
           <button style={styles.filterButton}>Content Publishers</button>
-        </div>
+        </div> */}
         
         {/* Showcase Grid */}
         <div style={styles.showcaseGrid}>
@@ -406,7 +411,9 @@ const CommunityShowcases = () => {
                     <TrendingUp size={16} /> {showcase.stats.comments}
                   </span>
                 </div>
-                <div style={styles.readButton}>
+                <div style={styles.readButton}
+                  onClick={() => navigate('/CaseStudies')}
+                >
                   Read Case Study <ArrowRight size={16} />
                 </div>
               </div>
@@ -418,9 +425,11 @@ const CommunityShowcases = () => {
         <div style={styles.submitSection}>
           <h2 style={styles.submitTitle}>Share Your <span style={styles.accent}>Success Story</span></h2>
           <p style={styles.submitText}>
-            Have you achieved remarkable results with PepperAds? We'd love to feature your success story in our community showcases. Get recognized by our global community and inspire others.
+            Using PepperAds and seeing success? We’d love to feature you. Get spotlighted in front of our global creator and brand community.
           </p>
-          <button style={styles.featuredCta}>
+          <button 
+            onClick={() => navigate('/login')}
+            style={styles.featuredCta}>
             Submit Your Story <ArrowRight size={20} />
           </button>
         </div>
