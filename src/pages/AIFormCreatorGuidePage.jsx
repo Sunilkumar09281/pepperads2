@@ -3,39 +3,41 @@ import { Sparkles, Zap, Rocket, BrainCircuit } from 'lucide-react';
 import FeatureLayout from '../components/FeatureLayout';
 import GlassmorphicCard from '../components/GlassmorphicCard';
 import AnimatedSection from '../components/AnimatedSection';
+import { useNavigate } from 'react-router-dom';
 
 const AIFormCreatorGuidePage = () => {
+  const navigate = useNavigate();
+
   return (
     <FeatureLayout
       title="How to Use AI Form Creator"
-      subtitle="Generate perfect surveys in seconds"
+      subtitle="Build Smart Surveys in Seconds"
       backgroundImage="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg"
     >
       <AnimatedSection className="mb-16">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <p className="text-xl text-gray-300 leading-relaxed">
-            Say goodbye to blank pages! Our AI Form Creator helps you generate a survey in seconds 
-            with just a short prompt. Perfect for high-volume campaigns and quick iterations.
+            No more starting from scratch. Just type what you need, and let AI generate tailored surveys—fast, effective, and ready to launch.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <GlassmorphicCard
             icon={<BrainCircuit className="w-10 h-10 text-red-500" />}
-            title="AI Generation"
-            description="Create complete surveys with a simple text prompt"
+            title="AI Survey Builder"
+            description="Turn a simple prompt into a complete, structured survey—no manual setup required."
             number="01"
           />
           <GlassmorphicCard
             icon={<Sparkles className="w-10 h-10 text-red-500" />}
-            title="Smart Templates"
-            description="Industry-optimized templates for better results"
+            title="Optimized Templates"
+            description="Access industry-specific survey formats designed for engagement and actionable insights."
             number="02"
           />
           <GlassmorphicCard
             icon={<Rocket className="w-10 h-10 text-red-500" />}
-            title="Quick Scale"
-            description="Save and reuse forms for multiple campaigns"
+            title="Scale with Ease"
+            description="Save and reuse your best-performing forms across campaigns with just a few clicks."
             number="03"
           />
         </div>
@@ -49,9 +51,11 @@ const AIFormCreatorGuidePage = () => {
               <div className="md:w-1/2">
                 <div className="bg-gray-900/80 p-6 rounded-xl border border-gray-800 mb-8">
                   <p className="text-gray-400 font-mono text-sm mb-4">AI Prompt:</p>
-                  <p className="text-white font-medium">Create a customer feedback survey for an ecommerce store</p>
+                  <p className="text-white font-medium">Create a customer satisfaction survey for an online store</p>
                   <div className="mt-4 flex">
-                    <button className="ml-auto bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium 
+                    <button 
+                      onClick={() => navigate('/login')}
+                      className="ml-auto bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium 
                       transition-all duration-300">
                       Generate
                     </button>
@@ -61,10 +65,11 @@ const AIFormCreatorGuidePage = () => {
                   AI-Powered Creation
                 </h3>
                 <p className="text-gray-300 mb-6">
-                  Let our AI handle the heavy lifting. Just describe what you need, and watch as it 
-                  generates professional surveys optimized for your industry and use case.
+                  Skip the blank page. Just describe your goal, and our AI will instantly craft a survey aligned with your audience and intent—designed for high response and clean data.
                 </p>
-                <button className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium 
+                <button 
+                  onClick={() => navigate('/contactus')}
+                  className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-medium 
                   transition-all duration-300 hover:translate-y-[-2px] hover:shadow-lg flex items-center gap-2">
                   <Zap className="w-5 h-5" />
                   Try AI Creator
