@@ -1,8 +1,12 @@
 import React from 'react';
 import { Shield, FileText, Lock } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const PrivacyTerms = () => {
+   const navigate = useNavigate();
   return (
+   
+
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
       <div className="relative h-[400px]">
@@ -14,7 +18,7 @@ const PrivacyTerms = () => {
             Trust & Transparency
           </h2>
           <p className="text-xl max-w-3xl text-white">
-            <span className="text-red-600 font-semibold">We believe</span> in clear communication about how we handle your data and maintain compliance with global standards.
+            <span className="text-red-600 font-semibold">We’re committed</span> to protecting your data and ensuring full compliance with global privacy standards.
           </p>
         </div>
       </div>
@@ -32,28 +36,28 @@ const PrivacyTerms = () => {
         {/* Privacy Policy Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-16">
           <div className="md:w-1/2">
-            <h3 className="text-4xl font-bold text-white mb-4">Privacy Policy</h3>
+            <h3 className="text-4xl font-bold text-white mb-4">Privacy Matters</h3>
             <p className="text-gray-400 text-lg mb-6">
-              Whether you're a business collecting customer feedback or a publisher using monetization forms, you can rely on us to meet global data standards, including GDPR compliance.
+              Whether you're gathering insights through forms or monetizing survey traffic, your data security is our top priority. Our platform is built on principles of privacy, integrity, and user control.
             </p>
             <ul className="space-y-3 text-gray-400">
               <li className="flex items-start">
                 <div className="bg-red-600 p-1 rounded-full mr-3 mt-1">
                   <Shield className="w-4 h-4 text-white" />
                 </div>
-                <span>Data encryption at rest and in transit</span>
+                <span>End-to-end data encryption (in transit and at rest)</span>
               </li>
               <li className="flex items-start">
                 <div className="bg-red-600 p-1 rounded-full mr-3 mt-1">
                   <Shield className="w-4 h-4 text-white" />
                 </div>
-                <span>No data sharing with third parties without consent</span>
+                <span>No third-party data sharing without explicit consent</span>
               </li>
               <li className="flex items-start">
                 <div className="bg-red-600 p-1 rounded-full mr-3 mt-1">
                   <Shield className="w-4 h-4 text-white" />
                 </div>
-                <span>Regular security audits and compliance updates</span>
+                <span>Ongoing compliance checks and security audits</span>
               </li>
             </ul>
           </div>
@@ -74,16 +78,16 @@ const PrivacyTerms = () => {
           <div className="md:w-1/2 order-1 md:order-2">
             <h3 className="text-4xl font-bold text-white mb-4">Terms of Service</h3>
             <p className="text-gray-400 text-lg mb-6">
-              Our terms of service outline the responsibilities and expectations for both parties, ensuring a fair and transparent relationship.
+              We believe in fair use, clear expectations, and accountability—for both users and providers. Our terms are structured to ensure a transparent and respectful partnership.
             </p>
             <div className="bg-gray-900 p-6 rounded-lg">
               <h4 className="text-red-600 font-bold mb-2">Key Terms</h4>
               <ul className="space-y-2 text-gray-400">
-                <li>• Service access and availability</li>
-                <li>• Content ownership and intellectual property</li>
-                <li>• Payment terms and subscription policies</li>
-                <li>• Account termination policies</li>
-                <li>• Dispute resolution process</li>
+                <li>• Reliable platform access and uptime</li>
+                <li>• Ownership of your content and data</li>
+                <li>• Clear billing and cancellation policies</li>
+                <li>• Guidelines for acceptable usage</li>
+                <li>• Guidelines for acceptable usage</li>
               </ul>
             </div>
           </div>
@@ -120,9 +124,14 @@ const PrivacyTerms = () => {
           <p className="text-gray-400 mb-6">
             Our dedicated compliance team is available to answer any questions you may have about our privacy policies or terms of service.
           </p>
-          <button className="bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors">
+          <button
+            onClick={() => navigate('/login')}
+            className="bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors"
+          >
             Contact Support
           </button>
+
+         
         </div>
 
         {/* Trust Indicators */}
