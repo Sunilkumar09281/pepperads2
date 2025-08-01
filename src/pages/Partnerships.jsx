@@ -1,7 +1,9 @@
 import React from 'react';
 import { ArrowRight, Users, Globe, BadgeCheck, Award } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Partnerships = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -15,7 +17,7 @@ const Partnerships = () => {
             Collaborate & Grow
           </h2>
           <p className="text-xl max-w-3xl text-white">
-            <span className="text-red-600 font-semibold">Together</span> we build powerful ecosystems that transform surveys into revenue streams and amplify your digital presence.
+            <span className="text-red-600 font-semibold">Together</span> We create scalable ecosystems that turn survey engagement into measurable revenue and digital growth.
           </p>
         </div>
       </div>
@@ -27,7 +29,7 @@ const Partnerships = () => {
         <div className="backdrop-blur-md bg-black bg-opacity-40 border border-red-900/30 rounded-xl p-8 mb-16 shadow-lg shadow-red-900/20">
           <h3 className="text-4xl font-bold text-white mb-6 text-center">Who We Partner With</h3>
           <p className="text-gray-300 text-lg text-center mb-8">
-            We work with select partners—agencies, offerwall platforms, affiliate publishers, and SaaS builders—to power advanced survey flows, incentivized campaigns, and monetization tools.
+            We collaborate with a curated network of partners—agencies, offerwall platforms, affiliate publishers, and SaaS builders—to power intelligent survey flows, incentivized experiences, and monetization tools aligned with industry standards.
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -36,7 +38,7 @@ const Partnerships = () => {
                 <Users className="w-12 h-12 text-red-600" />
               </div>
               <h4 className="text-xl font-bold mb-2">Agencies</h4>
-              <p className="text-gray-400">Enhance client offering with our survey solutions</p>
+              <p className="text-gray-400">Enhance your client offerings with data-driven survey solutions</p>
             </div>
             
             <div className="bg-gradient-to-br from-gray-900 to-black p-5 rounded-lg border border-red-900/20 text-center">
@@ -44,7 +46,7 @@ const Partnerships = () => {
                 <Globe className="w-12 h-12 text-red-600" />
               </div>
               <h4 className="text-xl font-bold mb-2">Offerwall Platforms</h4>
-              <p className="text-gray-400">Integrate seamless survey experiences</p>
+              <p className="text-gray-400">Deliver seamless, high-converting survey experiences</p>
             </div>
             
             <div className="bg-gradient-to-br from-gray-900 to-black p-5 rounded-lg border border-red-900/20 text-center">
@@ -52,7 +54,7 @@ const Partnerships = () => {
                 <BadgeCheck className="w-12 h-12 text-red-600" />
               </div>
               <h4 className="text-xl font-bold mb-2">Affiliate Publishers</h4>
-              <p className="text-gray-400">Monetize traffic with targeted surveys</p>
+              <p className="text-gray-400">Maximize traffic value with targeted survey engagement</p>
             </div>
             
             <div className="bg-gradient-to-br from-gray-900 to-black p-5 rounded-lg border border-red-900/20 text-center">
@@ -68,7 +70,7 @@ const Partnerships = () => {
         {/* Benefits Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-10 mb-16">
           <div className="md:w-1/2">
-            <h3 className="text-4xl font-bold text-white mb-4">Increase Your Revenue</h3>
+            <h3 className="text-4xl font-bold text-white mb-4">Boost Your Revenue</h3>
             <p className="text-gray-400 text-lg mb-6">
               If you're managing traffic and looking to increase revenue through smart surveys or embedded form systems, our partner ecosystem might be a fit.
             </p>
@@ -96,7 +98,7 @@ const Partnerships = () => {
           <div className="md:w-1/2">
             <div className="backdrop-blur-lg bg-black bg-opacity-30 border border-red-900/40 rounded-xl p-6 shadow-xl shadow-red-900/10">
               <img 
-                src="/api/placeholder/600/400" 
+                src="https://i.pinimg.com/1200x/88/6f/14/886f140b54cdf940ff059dbdb6775f1d.jpg" 
                 alt="Partnership Benefits" 
                 className="w-full rounded-lg object-cover"
               />
@@ -123,7 +125,7 @@ const Partnerships = () => {
           <div className="md:w-1/2">
             <div className="backdrop-blur-lg bg-black bg-opacity-30 border border-red-900/40 rounded-xl p-6 shadow-xl shadow-red-900/10">
               <img 
-                src="/api/placeholder/600/400" 
+                src="https://i.pinimg.com/1200x/34/6e/36/346e367abed9d42893fe2a50eb305e0d.jpg" 
                 alt="Integration Solutions" 
                 className="w-full rounded-lg object-cover"
               />
@@ -134,9 +136,9 @@ const Partnerships = () => {
         {/* Testimonial */}
         <div className="backdrop-blur-md bg-gradient-to-r from-black to-red-950 bg-opacity-30 border border-red-900/20 rounded-xl p-10 mb-16 text-center">
           <p className="text-xl italic text-gray-300 mb-6">
-            "This partnership has transformed how we monetize our traffic. The survey integration was seamless and our revenue has increased by 43% in just three months."
+            "Integrating their survey tools was a game-changer. Engagement improved, and our revenue jumped 43% in just three months."
           </p>
-          <div className="font-semibold text-red-400">James Wilson</div>
+          <div className="font-semibold text-red-400">PepperAds</div>
           <div className="text-sm text-gray-400">CEO, Digital Affiliates Network</div>
         </div>
 
@@ -144,7 +146,7 @@ const Partnerships = () => {
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           <div className="backdrop-blur-md bg-black bg-opacity-50 border border-red-900/30 p-6 rounded-xl text-center">
             <div className="text-3xl font-bold text-red-600 mb-2">50+</div>
-            <div className="text-gray-400">Integration Partners</div>
+            <div className="text-gray-400">Tech & Traffic Partners</div>
           </div>
           <div className="backdrop-blur-md bg-black bg-opacity-50 border border-red-900/30 p-6 rounded-xl text-center">
             <div className="text-3xl font-bold text-red-600 mb-2">$2.5M+</div>
@@ -160,12 +162,16 @@ const Partnerships = () => {
         <div className="backdrop-blur-lg bg-gradient-to-br from-red-950 to-black bg-opacity-20 border border-red-900/40 rounded-xl p-10 text-center">
           <h3 className="text-3xl font-bold mb-4">Ready to Partner With Us?</h3>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            This is where smart creators and high-volume publishers collaborate with us to take forms to the next level.
+            Join a growing network of creators and publishers using surveys to unlock deeper insights and better monetization.
           </p>
-          <button className="group flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors mx-auto">
-            Become a Partner Today
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </button>
+          <button
+              onClick={() => navigate('/login')}
+              className="group flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors mx-auto"
+            >
+              Become a Partner Today
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            
         </div>
       </div>
     </div>
