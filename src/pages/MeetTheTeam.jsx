@@ -1,45 +1,48 @@
 import React from 'react';
 import { User, Mail, ExternalLink } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const MeetTheTeam = () => {
   const teamMembers = [
     {
-      name: 'Alex Morgan',
-      role: 'Founder & CEO',
-      bio: 'Background in automation and affiliate marketing with 10+ years experience in building form-based tech solutions.',
-      image: '/api/placeholder/400/400',
+      name: 'Developers',
+      role: '',
+      bio: 'Our developers are building a fast, reliable backend with scalable infrastructure and seamless third-party integrations. They ensure the platform performs smoothly across devices and high-traffic environments.',
+      image: 'https://i.pinimg.com/1200x/8e/90/80/8e9080b568929a595e9396ba8b23b04a.jpg',
     },
     {
-      name: 'Jamie Chen',
-      role: 'Lead Designer',
-      bio: 'Expert in UX/UI with a passion for creating intuitive, conversion-focused designs that drive user engagement.',
-      image: '/api/placeholder/400/400',
+      name: 'Designers',
+      role: '',
+      bio: 'Our designers focus on crafting clean, intuitive interfaces that make survey creation effortless. Their goal is to improve user experience and maximize form completion rates through smart design.',
+      image: 'https://i.pinimg.com/736x/e5/07/a6/e507a6976227212ae105e91b75b7125d.jpg',
     },
     {
-      name: 'Raj Patel',
-      role: 'Head of Development',
-      bio: 'Full-stack developer specializing in scalable web applications and monetization strategies for digital products.',
-      image: '/api/placeholder/400/400',
+      name: 'Data Strategists',
+      role: '',
+      bio: 'Our data team works on optimizing how responses are collected, analyzed, and structured. They ensure partners get meaningful insights and actionable reporting from every campaign.',
+      image: 'https://i.pinimg.com/1200x/64/92/8b/64928b4c618ce60985affe954b2f8b59.jpg',
     },
     {
-      name: 'Sarah Johnson',
-      role: 'Marketing Strategist',
-      bio: 'Growth marketing specialist with expertise in audience building and form-based conversion optimization.',
-      image: '/api/placeholder/400/400',
+      name: 'Marketers',
+      role: '',
+      bio: 'Our marketers experiment with affiliate strategies, monetization flows, and growth tactics. Their job is to help publishers and creators maximize revenue through smarter audience engagement.',
+      image: 'https://i.pinimg.com/1200x/28/2d/03/282d03a423f03b0793a7c2e83deb04ea.jpg',
     },
     {
-      name: 'Carlos Rodriguez',
-      role: 'Data Analyst',
-      bio: 'Turns complex data into actionable insights, helping our clients maximize the value of their form responses.',
-      image: '/api/placeholder/400/400',
+      name: 'Data Analysts',
+      role: '',
+      bio: 'Our data analysts dive deep into user behavior, form performance, and campaign metrics. They transform raw data into actionable insights—guiding product improvements, conversion strategies, and smarter decision-making across the platform.',
+      image: 'https://i.pinimg.com/736x/ea/4d/88/ea4d886083a992fa149dce9fcf014355.jpg',
     },
     {
-      name: 'Leila Ahmadi',
-      role: 'Customer Success',
-      bio: 'Dedicated to ensuring clients get the most out of our platform through training and strategic guidance.',
-      image: '/api/placeholder/400/400',
+      name: 'Customer Success Team',
+      role: '',
+      bio: 'Together, we’re building a platform that’s simple enough for solo creators and powerful enough for enterprises—focused on performance, automation, and long-term partner value.',
+      image: 'https://i.pinimg.com/736x/91/dc/94/91dc940d444ca40f6f7f92329842afbb.jpg',
     },
   ];
+  const navigate = useNavigate();
+
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -129,12 +132,15 @@ const MeetTheTeam = () => {
       <div className="container mx-auto px-4 py-16 max-w-4xl">
         <div className="bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl border border-gray-800">
           <div className="text-center">
-            <h3 className="text-3xl font-bold mb-4">Join Our Team</h3>
+            <h3 className="text-3xl font-bold mb-4">Meet Our Team</h3>
             <p className="text-gray-300 mb-6">
-              We're always looking for talented individuals who are passionate about creating exceptional digital experiences.
+              The passionate minds shaping every pixel, product, and partnership.
+              From developers to designers, each team member plays a role in making our platform simple, smart, and scalable.
             </p>
-            <button className="bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors">
-              View Open Positions
+            <button
+              onClick={() => navigate('/ContactUs')}
+              className="bg-red-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-red-700 transition-colors">
+              View Option
             </button>
           </div>
         </div>
