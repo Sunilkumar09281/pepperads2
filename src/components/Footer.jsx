@@ -78,6 +78,8 @@ const Footer = () => {
             </a></li>
             <li><a href="/nps-calculator" className="hover:underline">NPS Calculator</a></li>
             <li><a href="/choose-plan" className="hover:underline">Choose a Plan</a></li>
+            
+            
 
 
 
@@ -95,6 +97,8 @@ const Footer = () => {
           <a href="https://facebook.com" target="_blank"><FaFacebookF /></a>
           <a href="https://x.com" target="_blank"><FaXTwitter /></a>
           <li><a href="/grow-revenue" className="hover:text-red-500">Grow with Survey Revenue</a></li>
+          <li><a href="/terms-of-use" className="hover:underline">Terms of Use</a></li>
+
         </div>
         <p className="text-gray-500 text-sm">© 2025 PepperAds. All rights reserved.</p>
       </div>

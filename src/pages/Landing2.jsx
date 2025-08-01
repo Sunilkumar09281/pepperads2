@@ -618,7 +618,7 @@ const Landing2 = () => {
           <TestimonialCard
             name="Sarah Johnson"
             role="Product Manager"
-            content=""
+            content="This platform made it incredibly easy to collect feedback from our customers. Highly recommended!"
             avatar="SJ"
             delay={0.1}
           />
@@ -626,7 +626,7 @@ const Landing2 = () => {
           <TestimonialCard
             name="Mike Chen"
             role="Creative Director"
-            content=""
+            content="The animations and layout are so clean! It's intuitive and pleasant to use. Great job!"
             avatar="MC"
             delay={0.2}
           />
@@ -634,7 +634,7 @@ const Landing2 = () => {
           <TestimonialCard
             name="Emily Rodriguez"
             role="Marketing Lead"
-            content=""
+            content="A seamless experience from start to finish. I especially love the mobile responsiveness!"
             avatar="ER"
             delay={0.3}
           />
@@ -869,6 +869,13 @@ const Landing2 = () => {
           </motion.p>
         </div>
       </section>
+      {/* Contact Info Section */}
+<section className="py-10 bg-black text-gray-300 text-center relative z-10 px-4">
+  <h3 className="text-xl font-semibold mb-2 text-white">Get in Touch</h3>
+  <p className="mb-1">📍 123 Startup Street, Innovation City, IN 532001</p>
+  <p className="mb-1">📞 +91-98765-43210</p>
+  <p>📧 contact@yourstartup.com</p>
+</section>
 
       {/* Enhanced cinematic overlay with parallax effect */}
       <motion.div
@@ -906,6 +913,19 @@ const Landing2 = () => {
 >
   Contact Us
 </motion.a>
+<section className="py-10 bg-black text-gray-300 text-center relative z-10 px-4">
+  <h4 className="text-xl font-semibold mb-4 text-white">Find us on</h4>
+  <div className="flex justify-center items-center gap-6 flex-wrap">
+    <a href="https://clutch.co/" target="_blank" rel="noopener noreferrer">
+      <img src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_a2e6552c41e001ca4ad09f7c3e808c9a/clutch-co.png" alt="Clutch" className="h-10" loading="lazy" />
+    </a>
+    <a href="https://www.yelp.com/" target="_blank" rel="noopener noreferrer">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Yelp_Logo.svg" alt="Yelp" className="h-10" loading="lazy" />
+    </a>
+    {/* Add more logos if listed */}
+  </div>
+</section>
+
 
     </motion.div>
   );

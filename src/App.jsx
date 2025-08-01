@@ -63,6 +63,7 @@ import Landing2 from './pages/Landing2';
 import Pricing from './pages/Pricing';
 import NPSCalculator from './pages/NPSCalculator';
 import ChooseAPlan from './pages/ChooseAPlan';
+import TermsOfUse from './pages/TermsOfUse';
 
 const HomePage = () => <Hero />;
 const FeaturesPage = () => <Features />;
@@ -140,6 +141,7 @@ const App = () => {
             <Route path="/Contact" element={<ContactUs />} />
             <Route path="/nps-calculator" element={<NPSCalculator />} />
             <Route path="/choose-plan" element={<ChooseAPlan />} />
+            <Route path="/terms-of-use" element={<TermsOfUse />} />
             
            
        
