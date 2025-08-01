@@ -1,31 +1,33 @@
 import React from 'react';
 import { Star, TrendingUp, Award, ArrowRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const CreatorSpotlight = () => {
   // Mock data for featured creators
   const featuredCreators = [
     {
-      name: "Emily Chen",
-      brand: "Digital Nomad Daily",
-      image: "/api/placeholder/400/400",
+      name: "Content Manager",
+      brand: "Personalized | Community-Driven",
+      image: "https://i.pinimg.com/736x/bd/aa/0d/bdaa0dc95d69c7df5760a6f617028108.jpg",
       description: "Increased newsletter subscriptions by 127% using PepperAds' gamified surveys.",
       tip: "Use conditional logic to personalize the user journey based on their interests."
     },
     {
-      name: "Marcus Johnson",
+      name: "Growth Lead",
       brand: "FitTech Solutions",
-      image: "/api/placeholder/400/400",
+      image: "https://i.pinimg.com/1200x/10/3a/9e/103a9e1712e9526d6e5a0019395b86a9.jpg",
       description: "Generated 50k+ qualified leads through specialized fitness assessment forms.",
       tip: "Incorporate progress bars to reduce form abandonment rates."
     },
     {
-      name: "Sophia Williams",
+      name: "Marketing Strategist",
       brand: "EcoStyle",
-      image: "/api/placeholder/400/400",
+      image: "https://i.pinimg.com/736x/bd/ff/bd/bdffbdcc15ffbff73274410ad90ec3b6.jpg",
       description: "Increased customer engagement by 85% with interactive product preference surveys.",
       tip: "Use image-based questions to boost completion rates by 40%."
     }
   ];
+const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 text-white">
@@ -42,7 +44,7 @@ const CreatorSpotlight = () => {
               Success Stories & Strategies
             </h2>
             <p className="text-xl max-w-3xl mx-auto">
-              Monthly highlights of top creators and brands using PepperAds — their stories, growth tips, and unique survey strategies.
+              Curated creator insights from across the web — shared here for inspiration. Credit to original sources.
             </p>
           </div>
         </div>
@@ -70,14 +72,14 @@ const CreatorSpotlight = () => {
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/2">
               <img 
-                src="/api/placeholder/500/500" 
+                src="https://i.pinimg.com/736x/00/56/f1/0056f135e2d98cb5900dac1828060bfb.jpg" 
                 alt="Featured Creator" 
                 className="rounded-2xl w-full object-cover shadow-lg border-2 border-red-600/30"
               />
             </div>
             <div className="lg:w-1/2">
-              <h3 className="text-4xl font-bold mb-2">Alex Rivera</h3>
-              <h4 className="text-2xl text-red-500 font-semibold mb-6">Founder, TechTrends Media</h4>
+              <h3 className="text-4xl font-bold mb-2">Tech Media Publisher</h3>
+              <h4 className="text-2xl text-red-500 font-semibold mb-6">Audience-Driven | Insightful | Scalable</h4>
               
               <div className="space-y-6">
                 <div className="backdrop-blur-md bg-black/30 rounded-xl p-6">
@@ -86,7 +88,7 @@ const CreatorSpotlight = () => {
                     <h5 className="text-xl font-semibold">Growth Results</h5>
                   </div>
                   <p className="text-gray-300">
-                    Generated over 250,000 qualified leads and increased conversion rates by 47% in just 3 months using our premium survey templates.
+                    Drove over 15% qualified leads and achieved a 12% lift in conversions within just three months by implementing advanced survey funnel techniques.
                   </p>
                 </div>
                 
@@ -96,14 +98,18 @@ const CreatorSpotlight = () => {
                     <h5 className="text-xl font-semibold">Success Strategy</h5>
                   </div>
                   <p className="text-gray-300">
-                    "We combined PepperAds' gamified surveys with targeted incentives, creating a feedback loop that not only gathered valuable customer insights but also boosted our retention rates significantly."
+                    “We utilized PepperAds’ gamified surveys alongside performance-based incentives to engage users at scale. This approach not only delivered high-quality insights but also improved user retention across key audience segments.”
                   </p>
                 </div>
                 
-                <button className="group flex items-center gap-2 bg-gradient-to-r from-red-700 to-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-800 hover:to-red-700 transition-colors">
+                <button
+                  onClick={() => navigate('/ContactUs')}
+                  className="group flex items-center gap-2 bg-gradient-to-r from-red-700 to-red-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-red-800 hover:to-red-700 transition-colors"
+                >
                   Read Full Story
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
+
               </div>
             </div>
           </div>
@@ -156,28 +162,33 @@ const CreatorSpotlight = () => {
         {/* Featured Stats - Glassmorphism Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-20">
           <div className="backdrop-blur-lg bg-white/5 border border-white/10 p-8 rounded-2xl text-center hover:bg-white/10 transition-all">
-            <div className="text-5xl font-bold text-red-600 mb-2">178%</div>
-            <div className="text-gray-300">Average Growth Rate</div>
+            <div className="text-5xl font-bold text-red-600 mb-2">500k+</div>
+            <div className="text-gray-300">surveys completed annually</div>
           </div>
           <div className="backdrop-blur-lg bg-white/5 border border-white/10 p-8 rounded-2xl text-center hover:bg-white/10 transition-all">
-            <div className="text-5xl font-bold text-red-600 mb-2">12M+</div>
-            <div className="text-gray-300">Survey Responses</div>
+            <div className="text-5xl font-bold text-red-600 mb-2">$2.5M+</div>
+            <div className="text-gray-300">revenue</div>
           </div>
           <div className="backdrop-blur-lg bg-white/5 border border-white/10 p-8 rounded-2xl text-center hover:bg-white/10 transition-all">
-            <div className="text-5xl font-bold text-red-600 mb-2">43%</div>
-            <div className="text-gray-300">Higher Engagement</div>
+            <div className="text-5xl font-bold text-red-600 mb-2">50+</div>
+            <div className="text-gray-300">integrations</div>
           </div>
         </div>
         
         {/* Nominate Section */}
         <div className="backdrop-blur-xl bg-gradient-to-r from-red-900/30 to-red-600/30 border border-red-500/20 rounded-3xl p-12 text-center">
-          <h2 className="text-4xl font-bold mb-6">Nominate a Creator</h2>
+          <h2 className="text-4xl font-bold mb-6">Nominate a Featured Contributor</h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Know someone who's achieving amazing results with PepperAds? Nominate them for our next Creator Spotlight feature!
+            Know a professional or organization leveraging PepperAds to drive impactful results? Help us recognize industry leaders by nominating them for our next Spotlight feature!
           </p>
-          <button className="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-xl text-lg font-semibold transition-colors">
+          <button
+            onClick={() => navigate('/contacts')}
+            className="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-xl text-lg font-semibold transition-colors"
+          >
             Submit Nomination
           </button>
+                    
+                    
         </div>
       </div>
     </div>
