@@ -19,6 +19,7 @@ const Footer = () => {
             <li><a href="/partnertools" className="hover:text-red-500">Partner Tools</a></li>
             <li><a href="/publishersuite" className="hover:text-red-500">Publisher Suite</a></li>
             <li><a href="/smartrouting" className="hover:text-red-500">Smart Response Routing</a></li>
+           
 
           </ul>
         </div>
@@ -76,14 +77,6 @@ const Footer = () => {
             <li><a href="/partnerships" className="hover:text-red-500">Partnerships</a></li>
             <li><a href="/creator-spotlight" className="hover:text-red-500">Creator Spotlight
             </a></li>
-            <li><a href="/nps-calculator" className="hover:underline">NPS Calculator</a></li>
-            <li><a href="/choose-plan" className="hover:underline">Choose a Plan</a></li>
-            
-            
-
-
-
-
           </ul>
         </div>
       </div>
@@ -96,11 +89,12 @@ const Footer = () => {
           <a href="https://instagram.com" target="_blank"><FaInstagram /></a>
           <a href="https://facebook.com" target="_blank"><FaFacebookF /></a>
           <a href="https://x.com" target="_blank"><FaXTwitter /></a>
+          
           <li><a href="/grow-revenue" className="hover:text-red-500">Grow with Survey Revenue</a></li>
-          <li><a href="/terms-of-use" className="hover:underline">Terms of Use</a></li>
-
         </div>
         <p className="text-gray-500 text-sm">© 2025 PepperAds. All rights reserved.</p>
+        <li><a href="/termandcon" className="text-gray-500 text-sm">TermsOfUse
+            </a></li>
       </div>
     </footer>
   );
