@@ -256,7 +256,9 @@ const MonetizationTemplates = () => {
               <p style={styles.cardDescription}>
                 Engage users with interactive quizzes that unlock rewards, driving both engagement and monetization.
               </p>
-              <button style={styles.cardButton}>
+              <button
+                onClick={() => navigate('/ContactUs')}
+                style={styles.cardButton}>
                 Preview <ArrowRight size={16} />
               </button>
             </div>
@@ -267,7 +269,9 @@ const MonetizationTemplates = () => {
               <p style={styles.cardDescription}>
                 Generate app installs through surveys that reward users for their feedback and participation.
               </p>
-              <button style={styles.cardButton}>
+              <button 
+                onClick={() => navigate('/ContactUs')}
+                style={styles.cardButton}>
                 Preview <ArrowRight size={16} />
               </button>
             </div>
@@ -278,7 +282,9 @@ const MonetizationTemplates = () => {
               <p style={styles.cardDescription}>
                 Convert visitors into leads with sign-up forms offering incentives for completing the process.
               </p>
-              <button style={styles.cardButton}>
+              <button 
+                onClick={() => navigate('/ContactUs')}
+                style={styles.cardButton}>
                 Preview <ArrowRight size={16} />
               </button>
             </div>
@@ -289,7 +295,9 @@ const MonetizationTemplates = () => {
               <p style={styles.cardDescription}>
                 Monetize your existing traffic through survey flows that connect to our offer ecosystem.
               </p>
-              <button style={styles.cardButton}>
+              <button 
+                onClick={() => navigate('/ContactUs')}
+                style={styles.cardButton}>
                 Preview <ArrowRight size={16} />
               </button>
             </div>

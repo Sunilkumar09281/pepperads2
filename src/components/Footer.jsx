@@ -50,6 +50,7 @@ const Footer = () => {
             <li><a href="/monetization" className="hover:text-red-500">Survey Monetization</a></li>
             <li><a href="/communityshowcases" className="hover:text-red-500">Community Showcases
             </a></li>
+            <li><a href="/plan" className="hover:text-red-500">Choose plan</a></li>
           </ul>
         </div>
 
@@ -93,8 +94,8 @@ const Footer = () => {
           <li><a href="/grow-revenue" className="hover:text-red-500">Grow with Survey Revenue</a></li>
         </div>
         <p className="text-gray-500 text-sm">© 2025 PepperAds. All rights reserved.</p>
-        <li><a href="/termandcon" className="text-gray-500 text-sm">TermsOfUse
-            </a></li>
+        <a href="/termandcon.html">Terms of Use</a>
+
       </div>
     </footer>
   );

@@ -89,7 +89,9 @@ const AiSurveyTool = () => {
                     Create a customer satisfaction survey for an ecommerce store selling electronics
                   </p>
                   <div className="mt-4 flex">
-                    <button className="ml-auto bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium 
+                    <button 
+                      onClick={() => navigate('/ContactUs')}
+                      className="ml-auto bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg text-sm font-medium 
                       transition-all duration-300">
                       Generate
                     </button>

@@ -105,7 +105,9 @@ const LogicRules = () => {
                     <GitBranch className="w-5 h-5" />
                     Join Waitlist
                   </button>
-                  <button className="bg-transparent hover:bg-gray-800 text-white border border-gray-700 
+                  <button 
+                    onClick={() => navigate('/ContactUs')}
+                    className="bg-transparent hover:bg-gray-800 text-white border border-gray-700 
                     px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2">
                     Learn More
                     <ArrowRight className="w-4 h-4" />

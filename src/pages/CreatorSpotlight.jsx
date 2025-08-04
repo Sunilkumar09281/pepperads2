@@ -184,7 +184,7 @@ const navigate = useNavigate();
             Know a professional or organization leveraging PepperAds to drive impactful results? Help us recognize industry leaders by nominating them for our next Spotlight feature!
           </p>
           <button
-            onClick={() => navigate('/contacts')}
+            onClick={() => navigate('/contactUs')}
             className="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-xl text-lg font-semibold transition-colors"
           >
             Submit Nomination

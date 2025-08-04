@@ -5,10 +5,12 @@ import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import StepsComponent from '../Animationcards/stepcards';
 
+
 const Hero = () => {
+  const navigate = useNavigate();
   const { title, image, paragraph } = useQueryParamsContent();
   const { user, loading } = useAuth();
-  const navigate = useNavigate();
+
   const [email, setEmail] = useState(null);
 
   // Ensure email is loaded from user or localStorage
@@ -65,7 +67,7 @@ const Hero = () => {
   );
 
   const defaultImage = "https://i.postimg.cc/mkTZMTHD/GW-Generated-Image-4-9-2025-3-10-32-PM.png";
-
+  
   return (
     <>
       <section className="pt-10 pb-20 px-4">
@@ -88,7 +90,9 @@ const Hero = () => {
                 <button onClick={handleStartSurvey} className="btn-primary flex items-center">
                   Start Creating <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
-                <button className="btn-secondary flex items-center">
+                <button 
+                  onClick={() => navigate('/contactUs')}
+                  className="btn-secondary flex items-center">
                   Try AI Form Builder <ArrowRight className="ml-2 h-5 w-5" />
                 </button>
               </div>

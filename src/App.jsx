@@ -65,7 +65,8 @@ import Pricing from './pages/Pricing';
 import CaseStudies from './pages/CaseStudies';
 import AIChatWidget from './components/AIChatWidget';
 import NotFound from './pages/NotFound';
-import Termandcon from './pages/termandcon';
+import Plan from './pages/plan';
+
 
 const HomePage = () => <Hero />;
 const FeaturesPage = () => <Features />;
@@ -143,7 +144,8 @@ const App = () => {
             <Route path="/CaseStudies" element={<CaseStudies/>} />
             <Route path="/AIChatWidget" element={<AIChatWidget/>} />
             <Route path="*" element={<NotFound />} />
-            <Route path="/termandcon" element={<Termandcon/>} />
+             <Route path="/plan" element={<Plan />} />
+            {/* <Route path="/termandcon" element={<Termandcon/>} /> */}
            
        
            {/* Public Routes */}
