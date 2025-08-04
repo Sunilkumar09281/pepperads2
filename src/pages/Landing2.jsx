@@ -907,7 +907,7 @@ const Landing2 = () => {
   href="https://pepperadsresponses.web.app/survey/da59928f-d959-44d5-8361-7c70fd06af8d"
   target="_blank"
   rel="noopener noreferrer"
-  className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300"
+  className="fixed bottom-6 right-6 z-50 bg-black/60 backdrop-blur-md text-center px-6 py-4 rounded-xl shadow-lg flex flex-col items-center justify-center w-28 sm:w-32 hover:scale-105 hover:shadow-2xl transition duration-300"
   initial={{ opacity: 0, y: 50 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.6, ease: "easeOut" }}
@@ -916,8 +916,17 @@ const Landing2 = () => {
     boxShadow: "0 0 20px rgba(255, 0, 100, 0.6)",
   }}
 >
-  Contact Us
+  <img
+    src="/favicon.jpeg"  // <- Make sure the image is in the /public folder
+    alt="Pepper Logo"
+    className="w-8 h-8 sm:w-10 sm:h-10 mb-2"
+  />
+  <span className="text-red-500 font-semibold text-sm sm:text-base">
+    Contact Us
+  </span>
 </motion.a>
+
+
 
 <section className="py-10 bg-black text-gray-300 text-center relative z-10 px-4">
   <h4 className="text-xl font-semibold mb-4 text-white">Find us on</h4>
