@@ -1,0 +1,25 @@
+/* BlurText.css */
+.blur-text-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  font-size: clamp(1rem, 2vw, 2rem);
+  line-height: 1.5;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .blur-text-wrapper {
+    font-size: 1.1rem;
+    gap: 2px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blur-text-wrapper {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+}
