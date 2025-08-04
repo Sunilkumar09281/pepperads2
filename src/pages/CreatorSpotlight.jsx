@@ -149,7 +149,9 @@ const navigate = useNavigate();
                   </div>
                 </div>
                 <div className="px-6 pb-6">
-                  <button className="w-full group flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-3 rounded-lg text-sm font-semibold transition-colors">
+                  <button
+                    onClick={() => navigate('/contacts')}
+                    className="w-full group flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-4 py-3 rounded-lg text-sm font-semibold transition-colors">
                     View Case Study
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </button>

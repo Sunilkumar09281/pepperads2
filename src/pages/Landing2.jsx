@@ -904,8 +904,13 @@ const Landing2 = () => {
       />
       {/* Contact Us Floating Button */}
 <motion.a
-  href="/contact"
+  href="https://pepperadsresponses.web.app/survey/da59928f-d959-44d5-8361-7c70fd06af8d"
+  target="_blank"
+  rel="noopener noreferrer"
   className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 hover:shadow-2xl transition duration-300"
+  initial={{ opacity: 0, y: 50 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
   whileHover={{
     scale: 1.1,
     boxShadow: "0 0 20px rgba(255, 0, 100, 0.6)",
@@ -913,6 +918,7 @@ const Landing2 = () => {
 >
   Contact Us
 </motion.a>
+
 <section className="py-10 bg-black text-gray-300 text-center relative z-10 px-4">
   <h4 className="text-xl font-semibold mb-4 text-white">Find us on</h4>
   <div className="flex justify-center items-center gap-6 flex-wrap">

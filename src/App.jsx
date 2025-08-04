@@ -83,7 +83,7 @@ const App = () => {
       <BrowserRouter>
         <Layout>
           <Routes>
-            <Route path="/" element={<HomePage />} />
+            <Route path="/" element={<Landing2 />} />
             
             <Route path="/features/*" element={<FeaturesPage />} />
             <Route path="/featuresexample/*" element={<ExamplesPage />} />
@@ -135,7 +135,7 @@ const App = () => {
             <Route path="/manage-features" element={<ManageFeatures />} />
             <Route path="/edit-process-overview" element={<EditProcessOverview />} />
             <Route path="/landing1" element={<Landing1 />} />
-            <Route path="/landing2" element={<Landing2 />} />
+            {/* <Route path="/landing2" element={<Landing2 />} /> */}
             <Route path="/edit-pdf-demo" element={<EditPdfDemo />} />
             <Route path="/edit-ai-promo" element={<EditAipromo />} />
             <Route path="/edit-micro-guides" element={<EditMicroGuides />} />
