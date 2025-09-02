@@ -4,6 +4,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   OAuthProvider,
+  updateProfile
 } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import { auth, db } from '../firebase';
@@ -13,16 +14,74 @@ const Signup = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('');
+  const [usernameError, setUsernameError] = useState('');
+  const [isUsernameValid, setIsUsernameValid] = useState(false);
+
+  // Username validation function
+  const validateUsername = (username) => {
+    const hasLetter = /[a-zA-Z]/.test(username);
+    const hasNumber = /[0-9]/.test(username);
+    const minLength = username.length >= 3;
+    const maxLength = username.length <= 20;
+    const validChars = /^[a-zA-Z0-9@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/.test(username);
+
+    if (!minLength) {
+      return { valid: false, message: 'Username must be at least 3 characters long' };
+    }
+    if (!maxLength) {
+      return { valid: false, message: 'Username must be less than 20 characters' };
+    }
+    if (!hasLetter) {
+      return { valid: false, message: 'Username must contain at least one letter' };
+    }
+    if (!hasNumber) {
+      return { valid: false, message: 'Username must contain at least one number' };
+    }
+    if (!validChars) {
+      return { valid: false, message: 'Username contains invalid characters' };
+    }
+    
+    return { valid: true, message: 'Username is valid!' };
+  };
+
+  // Handle username change with validation
+  const handleUsernameChange = (e) => {
+    const value = e.target.value;
+    setUsername(value);
+    
+    if (value.length > 0) {
+      const validation = validateUsername(value);
+      setIsUsernameValid(validation.valid);
+      setUsernameError(validation.valid ? '' : validation.message);
+    } else {
+      setIsUsernameValid(false);
+      setUsernameError('');
+    }
+  };
 
   // Email/password signup
   const handleSignup = async (e) => {
     e.preventDefault();
+    
+    // Validate username before submission
+    if (!isUsernameValid) {
+      alert('Please enter a valid username with letters and numbers');
+      return;
+    }
+    
     try {
       const userCred = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCred.user;
 
+      // Update user profile with username
+      await updateProfile(user, {
+        displayName: username
+      });
+
       await setDoc(doc(db, 'users', user.uid), {
         email: user.email,
+        username: username,
         role: 'user',
       });
 
@@ -121,6 +180,45 @@ const Signup = () => {
           <form className="space-y-4" onSubmit={handleSignup}>
             <div>
               <label className="block text-sm font-medium text-white mb-1">
+                Username
+              </label>
+              <div className="relative">
+                <input
+                  type="text"
+                  value={username}
+                  onChange={handleUsernameChange}
+                  className={`w-full px-3 py-2 bg-white/10 text-white placeholder-gray-400 border rounded-lg focus:outline-none focus:ring-2 focus:border-transparent ${
+                    username.length > 0
+                      ? isUsernameValid
+                        ? 'border-green-500 focus:ring-green-500'
+                        : 'border-red-500 focus:ring-red-500'
+                      : 'border-white/30 focus:ring-[#E31B23]'
+                  }`}
+                  placeholder="e.g., john123, user@456"
+                  required
+                />
+                {username.length > 0 && (
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                    {isUsernameValid ? (
+                      <span className="text-green-500 text-xl">✓</span>
+                    ) : (
+                      <span className="text-red-500 text-xl">✗</span>
+                    )}
+                  </div>
+                )}
+              </div>
+              {usernameError && (
+                <p className="text-red-400 text-sm mt-1">{usernameError}</p>
+              )}
+              {isUsernameValid && username.length > 0 && (
+                <p className="text-green-400 text-sm mt-1">✓ Username is valid!</p>
+              )}
+              <p className="text-gray-400 text-xs mt-1">
+                Must contain letters, numbers (special symbols optional)
+              </p>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-white mb-1">
                 Email address
               </label>
               <input
@@ -129,6 +227,7 @@ const Signup = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full px-3 py-2 bg-white/10 text-white placeholder-gray-400 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E31B23] focus:border-transparent"
                 placeholder="Enter your email"
+                required
               />
             </div>
             <div>
@@ -141,6 +240,7 @@ const Signup = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full px-3 py-2 bg-white/10 text-white placeholder-gray-400 border border-white/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#E31B23] focus:border-transparent"
                 placeholder="Enter your password"
+                required
               />
             </div>
 

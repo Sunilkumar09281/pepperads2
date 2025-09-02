@@ -25,37 +25,72 @@ const Hero = () => {
   }, [user]);
 
   const handleStartSurvey = async () => {
-    if (loading) return;
+    console.log("Start Creating button clicked!");
+    console.log("Loading state:", loading);
+    console.log("User state:", user);
+    
+    if (loading) {
+      console.log("Still loading, returning...");
+      return;
+    }
 
-    if (!email) {
-      alert("Email not found. Please log in first.");
+    if (!user) {
+      console.log("No user found, redirecting to login");
+      alert("Please log in first to start creating.");
       navigate('/login');
       return;
     }
 
+    // Get user data from authentication context
+    const userData = {
+      email: user.email,
+      username: user.displayName || user.email?.split('@')[0] || 'User',
+      uid: user.uid
+    };
+
+    console.log("User data prepared:", userData);
+
     try {
+      console.log("Attempting to save email to backend...");
+      // Optional: Save email to your backend if needed
       const response = await fetch('https://survey-ai-033z.onrender.com/save-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ email: userData.email })
       });
 
       const data = await response.json();
       console.log("Flask backend response:", data);
 
-      if (!response.ok) {
-        throw new Error(data.message || 'Failed to save email');
+      // Redirect to hostsliceresponse.web.app with user data
+      const targetUrl = `https://hostsliceresponse.web.app/?email=${encodeURIComponent(userData.email)}&username=${encodeURIComponent(userData.username)}&uid=${encodeURIComponent(userData.uid)}`;
+      console.log("Opening URL:", targetUrl);
+      
+      const newWindow = window.open(targetUrl, '_blank', 'noopener,noreferrer');
+      
+      if (!newWindow) {
+        console.error("Popup blocked! Trying location.href instead");
+        window.location.href = targetUrl;
+      } else {
+        console.log("Successfully opened new window");
       }
 
-      // Redirect to survey platform
-      const redirectUrl = ``;
-      window.location.href = redirectUrl;
-
     } catch (error) {
-      console.error("Error:", error);
-      alert('Something went wrong. Please try again.');
+      console.error("Backend error:", error);
+      // Still redirect even if backend call fails
+      const targetUrl = `https://hostsliceresponse.web.app/?email=${encodeURIComponent(userData.email)}&username=${encodeURIComponent(userData.username)}&uid=${encodeURIComponent(userData.uid)}`;
+      console.log("Opening URL (fallback):", targetUrl);
+      
+      const newWindow = window.open(targetUrl, '_blank', 'noopener,noreferrer');
+      
+      if (!newWindow) {
+        console.error("Popup blocked! Trying location.href instead");
+        window.location.href = targetUrl;
+      } else {
+        console.log("Successfully opened new window (fallback)");
+      }
     }
   };
 
